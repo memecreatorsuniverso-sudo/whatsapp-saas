@@ -1,0 +1,12 @@
+{
+  "build": {
+    "builder": "nixpacks",
+    "buildCommand": "npm install"
+  },
+  "deploy": {
+    "numReplicas": 1,
+    "startCommand": "node index.js",
+    "restartPolicyType": "on_failure",
+    "restartPolicyMaxRetries": 5
+  }
+}

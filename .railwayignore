@@ -1,0 +1,6 @@
+auth/
+node_modules/
+.git/
+*.log
+.env.local
+.npmrc
