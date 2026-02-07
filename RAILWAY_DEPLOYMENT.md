@@ -98,6 +98,21 @@ Add via Dashboard:
 
 WhatsApp auth sessions stored in `./auth/{userId}/` are preserved across deploys on Railway.
 
+### GitHub Actions / Secrets (optional)
+
+If you want continuous deployment via GitHub Actions (workflow added), create the following repository secrets:
+
+- `RAILWAY_TOKEN` — your Railway API token (found in Railway account settings)
+- `RAILWAY_PROJECT_ID` — your Railway project ID (found in project settings)
+- `RAILWAY_DEPLOY_URL` — the deployed public URL (used by the workflow health check)
+
+To add secrets:
+
+1. Go to your GitHub repo → Settings → Secrets and variables → Actions → New repository secret
+2. Add each secret above with its value
+
+The provided GitHub Actions workflow will use these secrets to trigger a Railway deployment on pushes to `main`.
+
 ### Cost
 
 Railway free tier:
